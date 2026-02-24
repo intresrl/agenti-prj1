@@ -1,0 +1,53 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <h1 class="auth-title">Food Cost SaaS</h1>
+    <h2 class="auth-subtitle">Sign in to your restaurant</h2>
+
+    <form [formGroup]="form" (ngSubmit)="submit()" novalidate>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input
+          id="email"
+          type="email"
+          formControlName="email"
+          placeholder="chef@restaurant.com"
+          autocomplete="email"
+        />
+        @if (form.controls.email.invalid && form.controls.email.touched) {
+          <span class="field-error">Valid email is required</span>
+        }
+      </div>
+
+      <div class="form-field">
+        <label for="password">Password</label>
+        <input
+          id="password"
+          type="password"
+          formControlName="password"
+          placeholder="••••••••"
+          autocomplete="current-password"
+        />
+        @if (form.controls.password.invalid && form.controls.password.touched) {
+          <span class="field-error">Password must be at least 8 characters</span>
+        }
+      </div>
+
+      @if (errorMessage()) {
+        <div class="alert-error">{{ errorMessage() }}</div>
+      }
+
+      <button
+        type="submit"
+        class="btn-primary"
+        [disabled]="isLoading()"
+      >
+        {{ isLoading() ? 'Signing in…' : 'Sign in' }}
+      </button>
+    </form>
+
+    <p class="auth-footer">
+      New restaurant?
+      <a routerLink="/auth/register">Create an account</a>
+    </p>
+  </div>
+</div>

@@ -97,6 +97,33 @@ export interface ApiResponse<T> {
   message?: string;
 }
 
+// ============================================
+// AUTH DTO TYPES (shared between frontend and backend)
+// ============================================
+
+export interface RegisterDto {
+  restaurantName: string;
+  adminName: string;
+  email: string;
+  password: string;
+}
+
+export interface LoginDto {
+  email: string;
+  password: string;
+}
+
+export interface InviteDto {
+  email: string;
+  name: string;
+}
+
+export interface AuthResponse {
+  accessToken: string;
+  user: User;
+  tenant: Tenant;
+}
+
 export interface PaginatedResponse<T> {
   items: T[];
   total: number;

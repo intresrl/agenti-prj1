@@ -362,6 +362,10 @@
       "apps/client/project.json",
       "nx/core/project-json"
     ],
+    "targets.serve.options.proxyConfig": [
+      "apps/client/project.json",
+      "nx/core/project-json"
+    ],
     "targets.serve.configurations.production": [
       "apps/client/project.json",
       "nx/core/project-json"
