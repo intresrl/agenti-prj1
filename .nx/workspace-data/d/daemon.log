@@ -277,3 +277,43 @@ Time for 'build typescript dependencies' 0.4397000000001299
 [NX v21.6.10 Daemon Server] - 2026-02-24T15:17:16.302Z - [REQUEST]: Responding to the client. handleContextFileData
 [NX v21.6.10 Daemon Server] - 2026-02-24T15:17:16.302Z - Done responding to the client handleContextFileData
 [NX v21.6.10 Daemon Server] - 2026-02-24T15:17:16.302Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 1. Response time: 0.
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.453Z - [WATCHER]: 0 file(s) created or restored, 20 file(s) modified, 0 file(s) deleted
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.457Z - [WATCHER]: Processing file changes in outputs
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.498Z - [WATCHER]: 0 file(s) created or restored, 31 file(s) modified, 0 file(s) deleted
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.505Z - [WATCHER]: Processing file changes in outputs
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.577Z - [REQUEST]: Updated workspace context based on watched changes, recomputing project graph...
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.577Z - [REQUEST]: nx.json,apps/client/src/test-setup.ts,apps/client/tsconfig.app.json,package.json,apps/client/project.json,apps/client/src/main.ts,apps/client/src/app/app.component.html,apps/client/jest.config.ts,apps/client/src/app/app.config.ts,tsconfig.base.json,apps/client/src/styles.scss,apps/client/tsconfig.json,apps/client/src/index.html,apps/client/src/app/app.routes.ts,apps/client/src/app/app.component.ts,apps/api/tsconfig.json,apps/client/tsconfig.spec.json,apps/client/src/app/app.component.spec.ts,apps/client/src/app/app.component.scss,apps/api/project.json,apps/api/src/app/app.controller.ts,apps/api/tsconfig.spec.json,apps/api/jest.config.ts,docker-compose.yml,apps/api/src/main.ts,apps/api/src/app/app.service.ts,apps/api/tsconfig.app.json,apps/api/src/app/app.service.spec.ts,apps/api/webpack.config.js,libs/shared/types/project.json,libs/shared/types/tsconfig.spec.json,jest.config.ts,jest.preset.js,apps/api/src/app/app.module.ts,libs/shared/types/tsconfig.json,libs/shared/types/README.md,libs/shared/types/tsconfig.lib.json,apps/api/src/app/app.controller.spec.ts,libs/shared/types/jest.config.ts,.env.example,libs/shared/types/src/index.ts
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.577Z - [REQUEST]: 
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.582Z - Time taken for 'hash changed files from watcher' 4.269200000002456ms
+Time for 'nx/core/package-json:createNodes' 1.3398999999990338
+Time for 'nx/core/project-json:createNodes' 1.4340999999985797
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.585Z - [REQUEST]: Responding to the client. handleGlob
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.586Z - Done responding to the client handleGlob
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.586Z - Handled GLOB. Handling time: 0. Response time: 1.
+Time for 'total for sendMessageToDaemon()' 3.834900000001653
+Time for 'deserialize daemon response' 0.026400000002468005
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.592Z - [REQUEST]: Responding to the client. handleHashMultiGlob
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.593Z - Done responding to the client handleHashMultiGlob
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.593Z - Handled HASH_GLOB. Handling time: 1. Response time: 1.
+Time for '@nx/eslint/plugin:createNodes' 14.701200000003155
+Time for 'total for sendMessageToDaemon()' 5.390500000001339
+Time for 'deserialize daemon response' 0.02380000000266591
+Time for 'nx/js/dependencies-and-lockfile:createNodes' 18.982499999998254
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.620Z - Time taken for 'build-project-configs' 30.031199999997625ms
+Time for 'build typescript dependencies' 0.04869999999937136
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.668Z - [SYNC]: collect registered sync generators
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.669Z - [SYNC]: project graph hash is the same, not collecting task sync generators
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.669Z - [SYNC]: nx.json hash is the same, not collecting global sync generators
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:53.669Z - Time taken for 'total execution time for createProjectGraph()' 52.779999999998836ms
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.548Z - Established a connection. Number of open connections: 3
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.549Z - Closed a connection. Number of open connections: 2
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.552Z - [REQUEST]: Client Request for Project Graph Received
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.553Z - Reusing in-memory cached project graph because no files changed.
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.580Z - Wrote project graph cache to c:\Users\nam\workspace\gilde\signore_degli_agenti\agenti-prj1\.nx\workspace-data\project-graph.json
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.580Z - [REQUEST]: Responding to the client. project-graph
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.582Z - Time taken for 'total for creating and serializing project graph' 28.070700000003853ms
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.583Z - Done responding to the client project-graph
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.583Z - Handled REQUEST_PROJECT_GRAPH. Handling time: 28. Response time: 3.
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.594Z - [REQUEST]: Responding to the client. handleContextFileData
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.594Z - Done responding to the client handleContextFileData
+[NX v21.6.10 Daemon Server] - 2026-02-24T15:17:54.595Z - Handled GET_CONTEXT_FILE_DATA. Handling time: 0. Response time: 1.
