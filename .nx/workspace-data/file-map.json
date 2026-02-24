@@ -17,16 +17,40 @@
   "fileMap": {
     "nonProjectFiles": [
       {
+        "file": ".github/skills/airchetipo-skills/SKILL.md",
+        "hash": "12765673469508387721"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "200723323605121501"
+      },
+      {
+        "file": "PRD.md",
+        "hash": "14306500686786715217"
+      },
+      {
+        "file": ".github/angular-instructions.md",
+        "hash": "1934837841145003943"
+      },
+      {
         "file": "BACKLOG.md",
         "hash": "13274009930288134759"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "18102546402105173180"
+      },
+      {
+        "file": "jest.config.ts",
+        "hash": "13929769406366965515"
       },
       {
         "file": "jest.preset.js",
         "hash": "13753139688126899388"
       },
       {
-        "file": "docker-compose.yml",
-        "hash": "15323828722807774449"
+        "file": ".github/copilot-instructions.md",
+        "hash": "5896669729135814344"
       },
       {
         "file": "nx.json",
@@ -37,36 +61,16 @@
         "hash": "14304077721266907147"
       },
       {
-        "file": ".github/copilot-instructions.md",
-        "hash": "7336171764970046794"
-      },
-      {
-        "file": "PRD.md",
-        "hash": "14306500686786715217"
-      },
-      {
-        "file": ".github/skills/airchetipo-skills/SKILL.md",
-        "hash": "12765673469508387721"
-      },
-      {
-        "file": "jest.config.ts",
-        "hash": "13929769406366965515"
-      },
-      {
-        "file": "package-lock.json",
-        "hash": "18102546402105173180"
-      },
-      {
-        "file": ".env.example",
-        "hash": "6430017504679046149"
-      },
-      {
         "file": "tsconfig.base.json",
         "hash": "11010743153850438409"
       },
       {
-        "file": ".gitignore",
-        "hash": "200723323605121501"
+        "file": "docker-compose.yml",
+        "hash": "15323828722807774449"
+      },
+      {
+        "file": ".env.example",
+        "hash": "6430017504679046149"
       }
     ],
     "projectFileMap": {
@@ -174,7 +178,7 @@
         },
         {
           "file": "apps/client/src/app/app.component.ts",
-          "hash": "11381555453484280609",
+          "hash": "201256410010845902",
           "deps": [
             "npm:@angular/core",
             "npm:@angular/router"

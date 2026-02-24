@@ -81,3 +81,6 @@ B2B SaaS platform for restaurant professionals to manage food costs, recipes, an
   - **AC1:** Given [context], when [action], then [expected outcome].
 - Do not consider a story complete unless all its acceptance criteria are verifiably satisfied.
 - When implementing a feature, reference the corresponding story and AC from the backlog.
+
+## Angular Coding Style Guide
+- **Angular:** [`angular-instructions.md`](angular-instructions.md) — Angular-specific coding standards and best practices.
