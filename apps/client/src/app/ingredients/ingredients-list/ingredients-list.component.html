@@ -1,0 +1,64 @@
+<div class="ingredients-page">
+  <div class="page-header">
+    <h1>Ingredients</h1>
+    @if (isAdmin()) {
+      <button class="btn-primary" (click)="openCreate()">+ Add Ingredient</button>
+    }
+  </div>
+
+  @if (showForm()) {
+    <div class="form-overlay">
+      <div class="form-card">
+        <app-ingredient-form
+          [ingredient]="formTarget() ?? null"
+          (saved)="onSaved()"
+          (cancelled)="closeForm()"
+        />
+      </div>
+      <button class="overlay-close-area" (click)="closeForm()" aria-label="Close form"></button>
+    </div>
+  }
+
+  @if (loading()) {
+    <p class="loading">Loading ingredients…</p>
+  } @else if (ingredients().length === 0) {
+    <div class="empty-state">
+      <p>No ingredients yet.</p>
+      @if (isAdmin()) {
+        <button class="btn-primary" (click)="openCreate()">Add your first ingredient</button>
+      }
+    </div>
+  } @else {
+    <table class="ingredients-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Unit</th>
+          <th>Package size</th>
+          <th>Price (base unit)</th>
+          @if (isAdmin()) {
+            <th>Actions</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        @for (ing of ingredients(); track ing.id) {
+          <tr>
+            <td>{{ ing.name }}</td>
+            <td>{{ ing.category ?? '—' }}</td>
+            <td>{{ ing.unit | uppercase }}</td>
+            <td>{{ ing.unitSize ? ing.unitSize + ' ' + ing.unit : '—' }}</td>
+            <td class="price">{{ formatPrice(ing) }}</td>
+            @if (isAdmin()) {
+              <td class="actions">
+                <button class="btn-icon" title="Edit" (click)="openEdit(ing)">✏️</button>
+                <button class="btn-icon btn-danger" title="Delete" (click)="delete(ing)">🗑️</button>
+              </td>
+            }
+          </tr>
+        }
+      </tbody>
+    </table>
+  }
+</div>

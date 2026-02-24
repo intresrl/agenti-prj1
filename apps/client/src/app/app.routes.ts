@@ -34,5 +34,13 @@ export const appRoutes: Route[] = [
         (m) => m.DashboardComponent
       ),
   },
+  {
+    path: 'ingredients',
+    canActivate: [authGuard],
+    loadComponent: () =>
+      import('./ingredients/ingredients-list/ingredients-list.component').then(
+        (m) => m.IngredientsListComponent
+      ),
+  },
   { path: '**', redirectTo: 'dashboard' },
 ];

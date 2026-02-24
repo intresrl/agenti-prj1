@@ -1,0 +1,84 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="ingredient-form">
+  <h2>{{ isEditMode() ? 'Edit Ingredient' : 'New Ingredient' }}</h2>
+
+  @if (error()) {
+    <div class="form-error-banner">{{ error() }}</div>
+  }
+
+  <div class="form-field">
+    <label for="name">Name <span class="required">*</span></label>
+    <input
+      id="name"
+      type="text"
+      formControlName="name"
+      placeholder="e.g. Olive Oil"
+    />
+    @if (form.controls.name.invalid && form.controls.name.touched) {
+      <span class="field-error">Name is required.</span>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="category">Category</label>
+    <input
+      id="category"
+      type="text"
+      formControlName="category"
+      placeholder="e.g. Oils & Fats"
+    />
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="unit">Unit <span class="required">*</span></label>
+      <select id="unit" formControlName="unit">
+        @for (u of units; track u) {
+          <option [value]="u">{{ u | uppercase }}</option>
+        }
+      </select>
+    </div>
+
+    @if (showUnitSize()) {
+      <div class="form-field">
+        <label for="unitSize">Package size ({{ form.controls.unit.value }})</label>
+        <input
+          id="unitSize"
+          type="text"
+          inputmode="decimal"
+          formControlName="unitSize"
+          placeholder="e.g. 0.75"
+        />
+        <span class="hint">Leave blank if price is already per base unit</span>
+      </div>
+    }
+  </div>
+
+  <div class="form-field">
+    <label for="price">
+      Price (€)
+      @if (showUnitSize() && form.controls.unitSize.value) {
+        <span class="hint-inline">— per package</span>
+      } @else {
+        <span class="hint-inline">— per {{ form.controls.unit.value }}</span>
+      }
+      <span class="required">*</span>
+    </label>
+    <input
+      id="price"
+      type="text"
+      inputmode="decimal"
+      formControlName="price"
+      placeholder="e.g. 1.50"
+    />
+    @if (form.controls.price.invalid && form.controls.price.touched) {
+      <span class="field-error">A valid price is required.</span>
+    }
+  </div>
+
+  <div class="form-actions">
+    <button type="button" class="btn-secondary" (click)="cancel()">Cancel</button>
+    <button type="submit" class="btn-primary" [disabled]="saving()">
+      {{ saving() ? 'Saving…' : (isEditMode() ? 'Update' : 'Create') }}
+    </button>
+  </div>
+</form>
