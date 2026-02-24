@@ -1,3 +1,8 @@
 {
-    "vsicons.presets.angular": true
+    "vsicons.presets.angular": true,
+    "github.copilot.chat.commitMessageGeneration.instructions": [
+        {
+            "text": "Include feature number and brief description of the changes. Avoid list of changes."
+        }
+    ]
 }
