@@ -1,49 +1,110 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
-# compiled output
-dist
-tmp
-/out-tsc
+# ============================================================================
+# BUILD OUTPUT
+# ============================================================================
+dist/
+dist-*
+out-tsc/
+build/
+tmp/
+temp/
 
-# dependencies
-node_modules
+# ============================================================================
+# DEPENDENCIES
+# ============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+pnpm-error.log*
+*.tsbuildinfo
 
-# IDEs and editors
-/.idea
+# ============================================================================
+# NX WORKSPACE
+# ============================================================================
+.nx/
+.nx/cache/
+
+# ============================================================================
+# ANGULAR
+# ============================================================================
+.angular/
+.angular/cache/
+.angular/tmp/
+
+# ============================================================================
+# IDEs AND EDITORS
+# ============================================================================
+.idea/
 .project
 .classpath
 .c9/
 *.launch
 .settings/
 *.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~
+.DS_Store
 
-# IDE - VSCode
+# ============================================================================
+# VS CODE
+# ============================================================================
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/c_cpp_properties.json
+!.vscode/vue.config.js
 
-# misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
+# ============================================================================
+# TESTING
+# ============================================================================
+/coverage/
+.nyc_output/
+junit.xml
+
+# ============================================================================
+# MISC
+# ============================================================================
+.sass-cache/
+connect.lock
+libpeerconnection.log
 testem.log
-/typings
+typings/
 
-# env files
+# ============================================================================
+# ENVIRONMENT & SECRETS
+# ============================================================================
 .env
 .env.local
+.env.*.local
+.env.production.local
 
-# System Files
+# ============================================================================
+# SYSTEM FILES
+# ============================================================================
 .DS_Store
 Thumbs.db
+thumbs.db
+ehthumbs.db
+.AppleDouble
+.LSOverride
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
 
-# Nx
-.nx/cache
+# ============================================================================
+# LOGS
+# ============================================================================
+*.log
+logs/
 
-# Angular
-.angular
+# ============================================================================
+# PACKAGE MANAGERS
+# ============================================================================
+pnpm-lock.yaml
